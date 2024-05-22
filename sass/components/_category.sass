@@ -1,0 +1,622 @@
+@import "vars"
+
+.category
+	.section-title
+		font-weight: 800
+	&-tag
+		display: inline-block
+		font-size: 12px
+		line-height: 16px
+		font-weight: 800
+		color: #9D9DA4
+		letter-spacing: 0.04em
+		text-transform: uppercase
+		margin-bottom: 24px
+	&-title
+		font-size: 48px
+		line-height: 64px
+		font-weight: 800
+		padding-bottom: 48px
+		margin: 0
+	&-post
+		display: flex
+		flex-flow: row nowrap
+		padding: 47px 0
+		border-bottom: 1px solid #EFEFF3
+		&__img
+			min-width: 384px
+			max-width: 384px
+			margin-right: 48px
+		&__info
+			p
+				font-family: $Lora
+				font-size: 18px
+				line-height: 32px
+		&__title
+			font-size: 24px
+			line-height: 32px
+			font-weight: 600
+			padding-bottom: 24px
+			a
+				color: #000
+				&:hover
+					color: #7b7b81
+		&:first-child
+			padding-top: 0
+		&:last-child
+			border-bottom: none
+	&-article
+		padding: 49px 0
+		border-bottom: 1px solid #EFEFF3
+		&:last-child
+			border-bottom: none
+		&__wrap
+			display: block
+			min-height: 328px
+			padding: 48px 54px 100px
+			position: relative
+			background-repeat: no-repeat
+			background-position: center
+			background-size: cover
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: linear-gradient(92.48deg, rgba(0, 0, 0, 0.4) 1.46%, rgba(0, 0, 0, 0) 98.54%)
+			.second-btn
+				display: inline-block
+				width: auto
+				color: #fff
+				position: absolute
+				bottom: 48px
+				left: 54px
+				z-index: 2
+				border-color: rgba(#fff, 0.2)
+				text-align: left
+				padding: 13px 51px 13px 23px
+				transition: $transition
+				svg
+					path
+						fill: #fff
+			&:hover .second-btn
+				border-color: #fff
+		&__tag
+			display: inline-block
+			font-size: 11px
+			line-height: 16px
+			font-weight: 800
+			color: #fff
+			letter-spacing: 0.04em
+			text-transform: uppercase
+			margin-bottom: 24px
+			position: relative
+			z-index: 2
+		&__title
+			font-size: 36px
+			line-height: 48px
+			font-weight: 800
+			color: #fff
+			padding-bottom: 30px
+			position: relative
+			z-index: 2
+		&__big
+			.category-article__wrap
+				min-height: 566px
+	.pagination-btn
+		margin: 0 0 48px
+	&-sidebar
+		padding: 47px 41px 48px
+		border: 1px solid #EFEFF3
+		margin-bottom: 48px
+		.main-social
+			padding: 0
+			margin: 0 0 48px
+			background: transparent
+			ul
+				li
+					width: 20%
+	&-advertising
+		padding-bottom: 48px
+		img
+			display: block
+			margin-right: auto
+			margin-left: auto
+		&:last-child
+			padding-bottom: 0
+	&-info
+		p
+			font-family: $Lora
+			font-size: 18px
+			line-height: 32px
+			padding-bottom: 47px
+			span
+				background: #E2E2E7
+		&__subtitle
+			p
+				font-family: $Manrope
+				font-size: 20px
+				line-height: 32px
+				font-weight: 600
+				color: #7B7B81
+				padding-bottom: 46px
+		&__row
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-between
+	&-col
+		width: 47%
+		p
+			padding: 0
+	&-block
+		padding-bottom: 49px
+		img
+			display: block
+	&-img
+		padding-bottom: 48px
+		img
+			display: block
+	&-news
+		padding-bottom: 47px
+		&__wrap
+			display: flex
+			flex-flow: row nowrap
+			justify-content: space-between
+			padding: 46px 53px 46px 45px
+			border: 1px solid #E4E4E4
+			border-left: 9px solid #000
+		&__img
+			min-width: 114px
+			max-width: 114px
+			margin-left: 20px
+			img
+				display: block
+		&__info
+			max-width: 546px
+		&__tag
+			display: inline-block
+			font-size: 12px
+			line-height: 16px
+			font-weight: 800
+			color: #9D9DA4
+			letter-spacing: 0.04em
+			text-transform: uppercase
+			margin-bottom: 12px
+		&__title
+			font-size: 16px
+			line-height: 24px
+			font-weight: 600
+			color: #000
+	&-main
+		padding-top: 24px
+		border-top: 1px solid #EFEFF3
+		border-bottom: 1px solid #EFEFF3
+		margin-bottom: 48px
+		&__row
+			display: flex
+			flex-flow: row nowrap
+			padding: 32px 0 0 24px
+			img
+				display: block
+				width: 100%
+				max-width: 120px
+				margin-right: 18px
+		&__name
+			display: block
+			font-family: $Lora
+			font-size: 18px
+			line-height: 24px
+			margin: 8px 0
+			color: #000
+		&__status
+			display: inline-block
+			font-size: 14px
+			line-height: 20px
+			font-weight: 600
+			color: #9D9DA4
+	&-quote
+		display: flex
+		flex-flow: row nowrap
+		justify-content: space-between
+		padding: 30px 0
+		border-top: 1px solid #EFEFF3
+		border-bottom: 1px solid #EFEFF3
+		margin-bottom: 48px
+		&__title
+			font-size: 24px
+			line-height: 1.5
+			font-weight: 600
+			color: #000
+		&__block
+			max-width: 276px
+			width: 100%
+			margin-left: 48px
+			p
+				padding: 0
+				font-family: $Manrope
+				font-size: 14px
+				line-height: 20px
+				font-weight: 600
+				color: #9D9DA4
+				max-width: 250px
+		&__name
+			display: inline-block
+			padding-bottom: 8px
+			font-family: $Lora
+			font-size: 18px
+			line-height: 24px
+			font-weight: normal
+	&-slider
+		&__wrap
+			position: relative
+			.category-num
+				display: none
+				position: absolute
+				bottom: 0
+				left: 50%
+				transform: translate(-50%,-50%)
+				text-align: center
+				font-size: 14px
+				line-height: 20px
+				font-weight: 600
+				color: #000
+		.slick-arrow
+			position: absolute
+			top: 50%
+			transform: translate(0,-50%)
+			width: 17px
+			height: 32px
+			cursor: pointer
+			z-index: 20
+			svg,img
+				display: block
+				max-width: 17px
+				max-height: 32px
+		.slick-prev
+			left: 48px
+		.slick-next
+			right: 48px
+		.slick-dots
+			bottom: 48px
+			li
+				width: auto
+				height: auto
+				display: inline-block
+				font-size: 16px
+				line-height: 20px
+				font-weight: 600
+				color: rgba(#fff, 0.4)
+				padding: 16px 20px
+				border-bottom: 8px solid transparent
+				&.slick-active
+					border-bottom-color: #fff
+					color: #fff
+		&.slick-dotted.slick-slider
+			margin-bottom: 48px
+	&-tags
+		display: flex
+		flex-flow: row nowrap
+		padding-bottom: 40px
+		span
+			display: inline-block
+			padding-right: 16px
+			font-size: 16px
+			line-height: 24px
+			font-weight: 600
+		ul
+			display: flex
+			flex-flow: row wrap
+			li
+				padding: 0 0 8px 8px
+				a
+					display: inline-block
+					padding: 6px 8px
+					font-size: 10px
+					line-height: 12px
+					font-weight: 800
+					color: #9D9DA4
+					letter-spacing: 0.04em
+					text-transform: uppercase
+					background: #F6F6F9
+					&:hover
+						color: #7b7b81
+						background: #EFEFF3
+	&-social
+		display: flex
+		flex-flow: row wrap
+		li
+			width: 25%
+			a
+				display: flex
+				align-items: center
+				justify-content: center
+				height: 48px
+				border-top: 1px solid #E4E4E4
+				border-left: 1px solid #E4E4E4
+				border-bottom: 1px solid #E4E4E4
+				img,svg
+					display: block
+					max-width: 16px
+					max-height: 16px
+					transition: $transition
+				&:hover
+					img,svg
+						opacity: 0.4
+			&:last-child
+				a
+					border-right: 1px solid #E4E4E4
+	&-materials
+		padding-bottom: 26px
+		.section-title
+			margin-bottom: 20px
+		&__title
+			padding: 24px 0
+			border-bottom: 1px solid #EFEFF3
+			font-size: 16px
+			line-height: 24px
+			font-weight: 600
+			a
+				color: #000
+				&:hover
+					color: #9D9DA4
+			&:last-child
+				border-bottom: none
+
+.sidebar-similar
+	.section-title
+		margin-bottom: 20px
+	.post
+		&-wrap
+			padding-left: 0
+			.post-title
+				font-family: $Manrope
+				font-weight: 600
+
+@media only screen and (max-width : 1200px)
+	.category
+		&-post
+			&__img
+				min-width: 300px
+				max-width: 300px
+				margin-right: 25px
+
+@media only screen and (max-width : 1100px)
+	.category
+		&-sidebar
+			padding: 30px 20px
+			.main-social
+				margin-bottom: 30px
+		.category-article__wrap .second-btn
+			width: auto
+			height: auto
+			padding: 13px 51px 13px 23px
+			svg
+				left: auto
+				right: 23px
+				transform: translate(0,-50%)
+
+@media only screen and (max-width : 940px)
+	.category
+		.main
+			&-content
+				width: 100%
+				padding-right: 0
+			&-sidebar
+				display: none
+		&-title
+			font-size: 30px
+			line-height: 1.3
+		&-post
+			&__img
+				min-width: 200px
+				max-width: 200px
+
+@media only screen and (max-width : 768px)
+	.category
+		&-top
+			padding: 24px 0
+		&-tag
+			color: #000
+			margin-bottom: 16px
+		&-title
+			padding: 0
+		&-post
+			padding: 20px 0
+		&-article
+			padding: 10px 0
+			position: relative
+			&::before,&::after
+				content: ''
+				position: absolute
+				left: 0
+				width: 100%
+				height: 1px
+				background: #fff
+			&::before
+				top: -1px
+			&::after
+				bottom: -1px
+			&__wrap
+				margin: 0 -16px
+			&:last-child
+				padding-bottom: 0
+		.main
+			&-wrap
+				padding-bottom: 0
+			&-sidebar__mob
+				display: none
+		.pagination-btn.second-btn
+			margin-bottom: 20px
+		&-block
+			padding-bottom: 24px
+		&-info
+			p
+				font-size: 16px
+				line-height: 24px
+				padding-bottom: 24px
+			&__subtitle
+				p
+					font-size: 16px
+					line-height: 24px
+			&__row
+				display: block
+				border-bottom: 1px solid #EFEFF3
+				margin-bottom: 24px
+		&-col
+			width: 100%
+			.category-news
+				padding-bottom: 24px
+		&-img
+			padding-bottom: 24px
+		&-news
+			padding-bottom: 24px
+			&__wrap
+				padding: 0 0 0 24px
+				border-top: none
+				border-right: none
+				border-bottom: none
+		&-slider
+			padding-bottom: 40px
+			border-bottom: 1px solid #EFEFF3
+			&__wrap
+				.category-num
+					display: block
+			&.slick-dotted.slick-slider
+				margin: 0 -16px 24px
+			.slick-arrow
+				top: auto
+				bottom: -10px
+				img,svg
+					max-width: 10px
+					max-height: 14px
+				svg path
+					fill: #000
+			.slick-prev
+				left: 16px
+			.slick-next
+				right: 16px
+			.slick-dots
+				display: none!important
+		&-quote
+			display: block
+			text-align: center
+			padding: 20px 0
+			margin-bottom: 24px
+			&__block
+				margin: 16px auto 0
+				p
+					max-width: 100%
+		&-social
+			margin-bottom: 16px
+		&-materials
+			&__title
+				padding: 20px 0
+
+@media only screen and (max-width : 630px)
+	.category
+		&-post
+			&__info
+				p
+					font-size: 16px
+					line-height: 24px
+		&-article
+			&__wrap
+				padding: 24px 24px 80px
+				.second-btn
+					bottom: 24px
+					left: 24px
+					i
+						display: inline-block
+		&-news
+			&__img
+				display: none
+		&-quote
+			&__title
+				font-size: 20px
+				line-height: 1.4
+			&__block
+				p
+					padding: 0
+					font-size: 12px
+					line-height: 20px
+			&__name
+				padding-bottom: 4px
+				font-size: 16px
+		&-main
+			margin-bottom: 24px
+			&__row
+				padding: 24px 0 0
+			&__name
+				font-size: 16px
+				margin: 4px 0
+			&__status
+				font-size: 12px
+		&-tags
+			padding: 16px 0 32px
+			span
+				display: none
+			ul
+				li
+					padding: 0 8px 8px 0
+
+@media only screen and (max-width : 530px)
+	.category
+		&-post
+			display: block
+			padding: 20px 0 0
+			&__img
+				max-width: 100%
+				min-width: auto
+				width: 100%
+				margin: 0 0 20px
+				img
+					display: block
+					width: 100%
+			&__info
+				p
+					display: none
+			&__title
+				font-size: 20px
+				line-height: 1.4
+				padding: 0 0 20px
+		&-article
+			&__wrap
+				min-height: 280px
+				padding: 24px 16px
+			&__tag
+				margin-bottom: 12px
+			&__title
+				font-size: 28px
+				line-height: 1.4
+				padding-bottom: 50px
+			&__big
+				.category-article__wrap
+					min-height: 300px
+
+@media only screen and (max-width : 450px)
+	.category
+		&-title
+			font-size: 24px
+		&-article
+			&__wrap
+				min-height: 222px
+				.second-btn
+					width: 40px!important
+					height: 40px!important
+					padding: 0!important
+					i
+						display: none
+					svg
+						right: auto!important
+						top: 50%
+						left: 50%!important
+						transform: translate(-50%,-50%)!important
+						max-width: 12px
+						min-width: 12px
+			&__title
+				font-size: 20px
+			&__big
+				.category-article__wrap
+					min-height: 222px

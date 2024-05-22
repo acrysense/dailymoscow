@@ -1,0 +1,650 @@
+@import "vars"
+
+.about
+	background: #000
+	padding: 168px 0 96px
+	.page-title
+		max-width: 740px
+		margin: 0 auto
+	&-wrapper
+		max-width: 924px
+		width: 100%
+		margin: 0 auto
+		background: #fff
+		position: relative
+		z-index: 101
+	&-link
+		display: block
+		width: 100%
+		text-align: center
+		font-size: 14px
+		line-height: 20px
+		font-weight: 600
+		color: #9D9DA4
+		padding: 14px
+		background: #F6F6F9
+		position: relative
+		z-index: 10
+	&-content
+		background: #fff
+	&-subtitle
+		display: block
+		text-align: center
+		font-size: 20px
+		line-height: 32px
+		font-weight: 600
+		color: #7B7B81
+		padding: 0 16px 48px
+	&-wrap
+		background: #fff
+		padding-bottom: 72px
+	&-block
+		max-width: 740px
+		width: 100%
+		padding: 0 16px
+		margin: 0 auto
+	&-bg
+		position: relative
+		&__img
+			display: none
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-repeat: no-repeat!important
+			background-position: center!important
+			background-size: cover!important
+
+.donate
+	padding: 48px 0
+	border-top: 1px solid #EFEFF3
+	&-subtitle
+		display: block
+		font-family: $Lora
+		font-size: 18px
+		padding-bottom: 24px
+	&-block
+		padding-bottom: 50px
+	&-row,&-wrap
+		display: flex
+		flex-flow: row nowrap
+	&-row
+		.input-block
+			margin-left: 48px
+			display: none
+			&.active
+				display: block
+	&-radio
+		display: block
+		position: relative
+		&__ico
+			white-space: nowrap
+			display: block
+			padding: 16px 22.5px
+			text-align: center
+			font-size: 12px
+			line-height: 16px
+			font-weight: 800
+			color: #000
+			text-transform: uppercase
+			transition: $transition
+		input
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			opacity: 0
+			cursor: pointer
+			z-index: 2
+			&:checked
+				& + .donate-radio__ico
+					background: #000
+					color: #fff
+	&-wrap
+		&__big
+			padding-bottom: 16px
+			.donate-radio__ico
+				padding: 16px 33px
+				letter-spacing: 0.04em
+				min-width: 165px
+	p
+		font-size: 12px
+		line-height: 20px
+		font-weight: 600
+		color: #7B7B81
+	&-form
+		&__row
+			display: flex
+			flex-flow: row wrap
+			margin: 0 -24px
+		&__col
+			width: 50%
+			padding: 0 24px 28px
+		.main-btn
+			display: block
+			width: 100%
+			font-size: 16px
+
+.information
+	padding: 48px 0 62px
+	border-top: 1px solid #EFEFF3
+	&-title
+		font-size: 24px
+		line-height: 1.5
+		font-weight: 600
+		padding-bottom: 48px
+	img
+		display: block
+		width: 100%
+		margin-bottom: 48px
+	p
+		font-family: $Lora
+		font-size: 18px
+		line-height: 32px
+		padding-bottom: 32px
+
+.wallFame
+	&-list
+		li
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			justify-content: space-between
+			padding: 25px 0 24px
+			border-bottom: 1px solid #EFEFF3
+			font-family: $Lora
+			font-size: 18px
+			line-height: 24px
+			b
+				white-space: nowrap
+				font-family: $Manrope
+				font-size: 16px
+				font-weight: 600
+			&:first-child
+				padding-top: 5px
+			&:last-child
+				border-bottom: none
+
+.thanks
+	padding: 32px 0 96px
+	&-wrap
+		padding-bottom: 24px
+		p
+			font-size: 20px
+			line-height: 32px
+			font-weight: 600
+			color: #7B7B81
+			padding-bottom: 24px
+			&:last-child
+				font-family: $Lora
+				font-size: 18px
+				line-height: 32px
+				font-weight: normal
+	&-title
+		text-align: center
+		padding: 24px 0
+		font-size: 24px
+		line-height: 1.5
+		font-weight: 600
+		border-top: 1px solid #EFEFF3
+		border-bottom: 1px solid #EFEFF3
+
+.pagination
+	padding: 26px 0
+	&.pagination-second
+		padding: 10px 0
+		.pagination-btn
+			margin: 0
+	&-btn.second-btn
+		font-size: 16px
+		line-height: 24px
+		padding: 35px 90px
+		margin-bottom: 48px
+		svg
+			max-width: 26px
+			right: 54px
+	&-row,&-list
+		display: flex
+		flex-flow: row nowrap
+	&-row
+		align-items: center
+		justify-content: space-between
+	&-list
+		li
+			font-size: 14px
+			text-align: center
+			span
+				display: inline-block
+				min-width: 48px
+				padding: 14px 5px
+				color: #9D9DA4
+		.active,a
+			display: inline-block
+			min-width: 48px
+			font-size: 14px
+			line-height: 20px
+			font-weight: 600
+			color: #000
+			padding: 14px 5px
+		.active
+			background: #000
+			color: #fff
+	&-load
+		display: none
+		align-items: center
+		justify-content: center
+		text-align: center
+		&__wrap
+			max-width: 48px
+			max-height: 48px
+			svg
+				display: block
+	&.pagination-active
+		.pagination
+			&-btn,&-row
+				display: none
+			&-load
+				display: flex
+				&__wrap
+					animation: pagin 2s linear infinite
+
+.aboutUs
+	padding: 32px 0 96px
+	p, ul li
+		font-family: $Lora
+		font-size: 18px
+		line-height: 32px
+		padding-bottom: 32px
+		a
+			color: #000
+	.thanks-title
+		margin: 15px 0 48px
+		span
+			display: block
+			max-width: 600px
+			margin: 0 auto
+	.toSupport
+		min-height: auto
+		padding: 0
+		margin: 16px 0 0
+		&-wrap
+			min-height: 148px
+			display: flex
+			align-items: center
+			align-items: center
+			padding: 20px 170px 20px 54px
+		&-title
+			font-size: 24px
+			line-height: 36px
+			padding: 0
+		&-img
+			right: 54px
+		&-link
+			display: none
+	&-info
+		p
+			padding-bottom: 20px
+		ul
+			padding-left: 17px
+			li
+				padding: 0 0 8px 10px
+				list-style: decimal
+	&.aboutUs-second
+		padding-bottom: 46px
+
+.partners
+	&-list
+		padding-bottom: 76px
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		justify-content: space-between
+		padding: 19px 0
+		border-bottom: 1px solid #EFEFF3
+		&:first-child
+			padding-top: 0
+		&:last-child
+			border-bottom: none
+	&-col
+		img
+			display: block
+			max-width: 80px
+			max-height: 48px
+			margin-left: 10px
+	&-subtitle
+		display: block
+		font-size: 16px
+		line-height: 24px
+		font-weight: 600
+		padding-bottom: 4px
+		a
+			color: #000
+	&-link
+		display: inline-block
+		font-size: 12px
+		line-height: 20px
+		font-weight: 600
+		color: #9D9DA4
+	&-bottom
+		background: #F6F6F9
+		padding: 48px 16px
+		text-align: center
+		p
+			max-width: 438px
+			margin: 0 auto
+			font-size: 12px
+			line-height: 20px
+			font-weight: 600
+			color: #9D9DA4
+	&-title
+		display: block
+		padding-bottom: 24px
+		font-size: 24px
+		line-height: 1.5
+		font-weight: 600
+		a
+			color: #000
+	&-text
+		display: block
+		padding-bottom: 8px
+		font-family: $Lora
+		font-size: 16px
+		line-height: 24px
+
+.rate
+	padding: 48px 0
+	border-top: 1px solid #EFEFF3
+	&-title
+		display: block
+		font-family: $Lora
+		font-size: 18px
+		line-height: 24px
+		padding-bottom: 24px
+	&-row
+		display: flex
+		flex-flow: row wrap
+	&-col
+		width: 50%
+		padding: 48px 16px
+		border: 1px solid #E4E4E4
+		transition: $transition
+		&:last-child
+			border-left: none
+		ul
+			padding-bottom: 28px
+			li
+				display: flex
+				flex-flow: row nowrap
+				align-items: center
+				font-family: $Lora
+				font-size: 15px
+				line-height: 20px
+				padding-bottom: 16px
+				transition: $transition
+				svg
+					display: block
+					max-width: 12px
+					min-width: 12px
+					margin-right: 12px
+					path
+						transition: $transition
+		.main-btn
+			display: block
+			width: 100%
+			font-size: 16px
+			padding: 13px 23px
+			border: 1px solid #000
+			&:hover
+				background: #1F1F1F
+		&:hover
+			border-color: #CECECE
+		&.active
+			background: #000
+			.rate
+				&-time,&-price
+					color: #fff
+			ul li
+				color: #fff
+				svg path
+					fill: #fff
+			.main-btn
+				border-color: #1F1F1F
+	&-wrap
+		max-width: 256px
+		margin: 0 auto
+	&-time
+		display: block
+		font-size: 24px
+		line-height: 1.5
+		font-weight: 600
+		padding-bottom: 8px
+		transition: $transition
+	&-price
+		display: block
+		font-size: 48px
+		line-height: 56px
+		font-weight: 600
+		padding-bottom: 22px
+		transition: $transition
+
+.data
+	.donate-form
+		&__row
+			margin-bottom: 0
+		&__col
+			padding-bottom: 24px
+		.main-btn
+			margin-top: 48px
+	&-info
+		padding: 48px 0 24px
+		p
+			font-size: 12px
+			line-height: 20px
+			font-weight: 600
+			color: #9D9DA4
+	&-title
+		display: block
+		padding-bottom: 16px
+		font-family: $Lora
+		font-size: 18px
+		line-height: 32px
+		font-weight: normal
+
+@media only screen and (max-width : 940px)
+	.about
+		background: transparent
+		padding-top: 0
+		padding-bottom: 10px
+		&-wrap
+			padding-bottom: 30px
+		.page-title
+			max-width: 100%
+		&-wrapper
+			margin: 0
+			background: transparent
+			z-index: 2
+		&-link
+			display: none
+		.page-title
+			text-align: left
+			padding: 0
+			color: #fff
+			position: relative
+			z-index: 2
+		&-subtitle
+			padding: 24px 16px 20px
+			text-align: left
+		&-bg
+			padding: 136px 16px 56px
+			&__img
+				display: block
+
+@media only screen and (max-width : 768px)
+	.about
+		padding-bottom: 0
+		&-wrap
+			padding-bottom: 24px
+		&-subtitle
+			font-size: 16px
+			line-height: 24px
+	.donate
+		padding: 24px 0
+		&-block
+			padding-bottom: 20px
+		&-subtitle
+			font-size: 16px
+			line-height: 24px
+			padding-bottom: 16px
+		&-row
+			display: block
+			.input-block
+				margin: 16px 0 0
+		&-form
+			&__row
+				margin: 0 -10px
+			&__col
+				padding: 0 10px 20px
+	.information
+		padding: 20px 0 16px
+		&-title
+			font-size: 20px
+			line-height: 1.4
+			padding-bottom: 20px
+		img
+			margin-bottom: 20px
+		p
+			font-size: 16px
+			line-height: 24px
+			padding-bottom: 24px
+	.wallFame
+		&-list
+			li
+				font-size: 16px
+				padding: 16px 0
+	.thanks
+		padding: 24px 0 40px
+		&-wrap
+			padding-bottom: 8px
+			p
+				font-size: 16px
+				line-height: 24px
+				padding-bottom: 16px
+				&:last-child
+					font-size: 16px
+					line-height: 24px
+		&-title
+			padding: 20px 0
+			font-size: 20px
+			line-height: 1.4
+	.pagination
+		padding: 4px 0 16px
+		&-btn.second-btn
+			font-size: 14px
+			line-height: 20px
+			padding: 13px 20px
+			margin: 0
+			svg
+				display: none
+		&-row
+			display: none
+	.aboutUs
+		padding: 24px 0 40px
+		p,ul li
+			font-size: 16px
+			line-height: 24px
+			padding-bottom: 24px
+		ul li
+			padding: 0 0 8px 6px
+		.thanks-title
+			margin: 0 0 24px
+		.toSupport
+			margin: 0 -16px
+			&-wrap
+				display: block
+				padding: 20px 140px 20px 16px
+			&-title
+				padding-bottom: 20px
+			&-link
+				display: inline-block
+			&-img
+				right: 24px
+		&.aboutUs-second
+			padding-bottom: 16px
+	.partners
+		&-list
+			padding-bottom: 0
+		&-bottom
+			padding: 20px 16px
+			margin: 0 -16px
+			position: relative
+			transform: translate(0,24px)
+		&-title
+			font-size: 20px
+			line-height: 1.4
+			padding-bottom: 16px
+		&-text
+			padding-bottom: 4px
+	.rate
+		padding: 24px 0
+		&-title
+			font-size: 16px
+			padding-bottom: 16px
+	.data
+		.donate-form
+			.main-btn
+				margin-top: 20px
+		&-info
+			padding: 24px 0
+		&-title
+			font-size: 16px
+			line-height: 24px
+			padding-bottom: 8px
+
+@media only screen and (max-width : 630px)
+	.rate
+		&-row
+			display: block
+		&-col
+			width: 100%
+			&:last-child
+				border-left: 1px solid #e4e4e4
+				border-top: none
+
+@media only screen and (max-width : 450px)
+	.donate
+		&-wrap
+			&__big
+				.donate-radio__ico
+					min-width: 144px
+					padding: 16px 23px
+		&-radio
+			&__ico
+				padding: 16px 16.5px
+		&-form
+			&__col
+				width: 100%
+	.aboutUs .toSupport-title
+		font-size: 20px
+		line-height: 1.4
+	.rate
+		&-col
+			padding: 24px
+			ul
+				padding-bottom: 12px
+				li
+					font-size: 14px
+					padding-bottom: 12px
+		&-wrap
+			max-width: 240px
+		&-time
+			font-size: 20px
+			line-height: 1.4
+		&-price
+			font-size: 36px
+			line-height: 48px
+			padding-bottom: 24px
+	.data .donate-form__col
+		padding-bottom: 20px

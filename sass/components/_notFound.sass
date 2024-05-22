@@ -1,0 +1,42 @@
+@import "vars"
+
+.notFound
+	background: #000
+	min-height: 100vh
+	text-align: center
+	padding: 303px 0 48px
+	&-img
+		padding-bottom: 135px
+		svg,img
+			display: block
+			max-width: 384px
+			margin: 0 auto
+	p
+		font-size: 16px
+		line-height: 24px
+		font-weight: 600
+		color: #fff
+		padding-bottom: 48px
+	.main-btn
+		display: block
+		max-width: 384px
+		margin: 0 auto
+		background: #fff
+		font-size: 16px
+		color: #000
+
+@media only screen and (max-height : 800px)
+	.notFound
+		padding: 200px 0 48px
+
+@media only screen and (max-width : 768px)
+	.notFound
+		padding: 222px 0 24px
+		position: relative
+		&-img
+			padding-bottom: 0
+			img,svg
+				max-width: 192px
+		p
+			margin-top: -20px
+			padding-bottom: 130px

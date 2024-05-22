@@ -1,0 +1,43 @@
+@import "vars"
+
+.toSupport
+	min-height: 148px
+	padding: 20px 150px 20px 16px
+	background: #000
+	margin: 40px -16px 0
+	position: relative
+	&-img
+		position: absolute
+		top: 22px
+		right: 24px
+		img
+			display: block
+			max-width: 104px
+	&-title
+		font-size: 20px
+		line-height: 1.4
+		font-weight: 600
+		color: #fff
+		padding-bottom: 20px
+	&-link
+		display: inline-block
+		width: 40px
+		height: 40px
+		border: 1px solid #2F2F2F
+		position: absolute
+		bottom: 20px
+		left: 16px
+		svg,img
+			display: block
+			max-width: 12px
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+	&-mob
+		display: none
+
+@media only screen and (max-width : 630px)
+	.toSupport
+		&-mob
+			display: block

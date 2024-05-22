@@ -1,0 +1,171 @@
+@import "vars"
+
+.footer
+	background: #000
+	position: relative
+	z-index: 2
+	&-top
+		padding: 48px 0
+		border-bottom: 1px solid #1F1F1F
+	&-top,&-wrap,&-row,&-list,&-social
+		display: flex
+		flex-flow: row nowrap
+	&-top
+		align-items: flex-end
+	&-logo
+		max-width: 206px
+		width: 100%
+		img,svg
+			display: block
+	&-row
+		align-items: center
+	&-col
+		padding-left: 118px
+		&__row
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			&:hover
+				.footer-col__title
+					color: #9D9DA4
+		&__img
+			min-width: 48px
+			width: 48px
+			margin-right: 24px
+			img,svg
+				display: block
+		&__title
+			display: inline-block
+			max-width: 115px
+			font-size: 14px
+			line-height: 20px
+			font-weight: 600
+			color: #fff
+			transition: $transition
+	&-bottom
+		padding: 24px 0 28px
+	&-row
+		justify-content: space-between
+		padding-bottom: 48px
+	&-list
+		li
+			padding-right: 48px
+			a
+				display: inline-block
+				font-size: 14px
+				line-height: 24px
+				font-weight: 600
+				color: #fff
+				&:hover
+					color: #9D9DA4
+	&-social
+		align-items: center
+		li
+			padding-left: 24px
+			a
+				img,svg
+					display: block
+					max-width: 16px
+					max-height: 16px
+				svg path
+					transition: $transition
+				&:hover svg path
+					fill: #9D9DA4
+	&-info
+		p
+			font-size: 13px
+			line-height: 16px
+			color: #9D9DA4
+			padding-bottom: 20px
+	&.footer-second
+		background: transparent
+		.footer-top
+			border-color: rgba(#fff, 0.16)
+
+@media only screen and (max-width : 1200px)
+	.footer-list li
+		padding-right: 20px
+
+@media only screen and (max-width : 940px)
+	.footer
+		&-col
+			padding-left: 40px
+		&-row
+			flex-flow: row wrap
+		&-list,&-social
+			width: 100%
+			justify-content: center
+			li
+				padding: 0 12px
+		&-list
+			padding-bottom: 30px
+		&.footer-second
+			background: #000
+
+@media only screen and (max-width : 768px)
+	.footer
+		&-top
+			display: block
+			padding: 40px 0
+			border: none
+		&-logo
+			display: none
+		.logo
+			display: block
+			text-align: center
+			margin-bottom: 40px
+		&-wrap
+			justify-content: center
+		&-col
+			padding: 0 10px
+		&-bottom
+			padding: 0 0 20px
+		&-row
+			padding-bottom: 42px
+		&-list
+			display: block
+			border-top: 1px solid #1F1F1F
+			padding-bottom: 40px
+			text-align: center
+			li
+				padding: 0
+				border-bottom: 1px solid #1F1F1F
+				a
+					display: block
+					width: 100%
+					font-size: 14px
+					line-height: 20px
+					font-weight: 600
+					padding: 14px 0
+		&-social
+			li
+				padding: 0 15px
+
+@media only screen and (max-width : 450px)
+	.footer
+		&-col
+			max-width: 146px
+			width: 100%
+			text-align: center
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				right: 0
+				width: 1px
+				height: 72px
+				background: #1F1F1F
+				margin-left: -0.5px
+			&__row
+				display: block
+			&__img
+				min-width: 72px
+				max-width: 72px
+				margin: 0 auto 16px
+			&__title
+				display: block
+				margin: 0 auto
+			&:last-child
+				&::after
+					display: none
