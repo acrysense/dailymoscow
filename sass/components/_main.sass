@@ -42,6 +42,12 @@
 		color: #fff
 		padding-bottom: 48px
 
+.header--new ~ .main
+	padding-top: 208px
+
+	@media screen and (max-width: 940px)
+		padding-top: 60px
+
 .main
 	padding-top: 272px
 	&-wrap
@@ -80,6 +86,9 @@
 			padding: 0 24px
 	&-block
 		padding: 0 0 48px 0
+		@media screen and (max-width: 768px)
+			&--desktop
+				display: none
 	&-sidebar
 		min-width: 384px
 		width: 384px
@@ -431,6 +440,269 @@
 		color: #fff
 		&:hover 
 			color: #fff
+
+.new-big-banner
+	&--desktop
+		@media screen and (max-width: 1023px)
+			display: none
+	&__wrap
+		position: relative
+		z-index: 1
+		overflow: hidden
+		display: block
+		padding: 40px 60px
+		width: 100%
+		color: #fff
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center center
+		&:hover
+			color: #fff
+	&__tag
+		display: block
+		margin-bottom: 31px
+		width: fit-content
+		font-size: 11px
+		font-weight: 800
+		line-height: 16px
+		letter-spacing: 0.04em
+		text-transform: uppercase
+	&__title
+		display: block
+		max-width: 670px
+		width: fit-content
+		font-family: $GraphikLCG
+		font-size: 36px
+		font-weight: bold
+		line-height: 48px
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		margin-top: 120px
+	&__item
+		@media screen and (min-width: 768px)
+			flex: 1 1 auto
+			max-width: 307px
+			width: calc(25% - 15px)
+			&:nth-child(4n),
+			&:nth-child(4n - 1),
+			&:nth-child(4n - 2)
+				margin-left: 20px
+	&__value
+		display: block
+		width: fit-content
+		font-family: $GraphikLCG
+		font-size: 16px
+		font-weight: 500
+		line-height: 24px
+
+.new-stories
+	@media screen and (min-width: 769px)
+		&--mobile
+			display: none
+	&__wrapper
+		display: flex
+		flex-wrap: wrap
+		@media screen and (max-width: 768px)
+			flex-wrap: nowrap
+			overflow-x: auto
+			overflow-y: hidden
+			margin: 0 -16px -14px
+			padding: 16px 16px 30px 16px
+			max-width: calc(100% + 32px)
+			width: calc(100% + 32px)
+			clip-path: inset(0 0 30px 0)
+	&__item
+		position: relative
+		z-index: 1
+		overflow: hidden
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		padding: 14px
+		min-height: 140px
+		background: #F6F6F9
+		border-radius: 10px
+		&--red
+			background: #E11A0D
+		&--blue
+			background: #56CCF2
+		&--gradient
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				z-index: -1
+				display: block
+				width: 100%
+				height: 100%
+				background: linear-gradient(to top, #EEF2F5 0%, rgba(238, 242, 245, 0) 100%)
+				opacity: 0.79
+
+		@media screen and (min-width: 1200px)
+			flex: 1 1 auto
+			width: calc(25% - 12px)
+			&:nth-child(4n),
+			&:nth-child(4n - 1),
+			&:nth-child(4n - 2)
+				margin-left: 16px
+		@media screen and (min-width: 769px) and (max-width: 1199px)
+			width: calc(50% - 8px)
+			&:nth-child(2n)
+				margin-left: 16px
+			&:nth-child(n + 3)
+				margin-top: 16px
+		@media screen and (max-width: 768px)
+			flex: 1 1 auto
+			min-width: 100px
+			width: calc(25% - 12px)
+			&:nth-child(n + 2)
+				margin-left: 16px
+		@media screen and (max-width: 767px)
+			padding: 7px
+			min-height: 74px
+	&__tag
+		display: block
+		padding: 3px 8px
+		width: fit-content
+		font-size: 10px
+		font-weight: 800
+		line-height: 16px
+		letter-spacing: 0.04em
+		text-transform: uppercase
+		color: #000
+		background: #fff
+		border-radius: 20px
+		@media screen and (max-width: 767px)
+			padding: 2px 4px
+			font-size: 6px
+			line-height: 8px
+	&__currencies
+		margin-top: 16px
+		@media screen and (max-width: 767px)
+			margin-top: 8px
+	&__currency
+		display: flex
+		align-items: center
+		width: fit-content
+		font-size: 24px
+		font-weight: 600
+		& > svg
+			min-width: 14px
+			width: 14px
+			height: 16px
+		& > * + * 
+			margin-left: 6px
+		@media screen and (max-width: 767px)
+			font-size: 13px
+			font-weight: 600
+			& > svg
+				min-width: 8px
+				width: 8px
+				height: 8px
+			& > * + *
+				margin-left: 3px
+	&__currency + &__currency
+		margin-top: 6px
+		@media screen and (max-width: 767px)
+			margin-top: 3px
+	&__heading
+		display: block
+		margin-top: 6px
+		width: fit-content
+		font-size: 36px
+		font-weight: normal
+		line-height: 1
+		
+		@media screen and (max-width: 767px)
+			margin-top: 2px
+			font-size: 20px
+	&__title
+		display: block
+		width: fit-content
+		font-family: $GraphikLCG
+		font-size: 20px
+		font-weight: 500
+		line-height: 1
+		@media screen and (max-width: 767px)
+			font-size: 12px
+	&__text
+		display: block
+		margin-top: 6px
+		width: fit-content
+		font-size: 15px
+		font-weight: 500
+		line-height: 1.33333333333
+		@media screen and (max-width: 767px)
+			margin-top: 2px
+			font-size: 8px
+	&__img-weather
+		position: absolute
+		top: 13px
+		right: -34px
+		z-index: 1
+		display: block
+		width: 101px
+		height: 72px
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: contain 
+		@media screen and (max-width: 767px)
+			top: 7px
+			right: -20px
+			width: 54px
+			height: 39px
+	&__img
+		position: absolute
+		top: 50%
+		left: 50%
+		z-index: 1
+		transform: translate(-50%, -50%)
+		display: block
+		width: 124px
+		height: 99px
+		filter: drop-shadow(0px 4px 49px rgba(0, 0, 0, 0.31))
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: contain
+		@media screen and (max-width: 767px)
+			width: 66px
+			height: 53px
+	&__bg
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: -1
+		display: block
+		width: 100%
+		height: 100%
+		pointer-events: none
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			z-index: 1
+			display: block
+			width: 100%
+			height: 100%
+			background: linear-gradient(to top, #EEF2F5 0%, rgba(238, 242, 245, 0) 100%)
+		img 
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
 
 .new-media-post
 	padding-bottom: 24px

@@ -8,6 +8,26 @@
 	height: 224px
 	z-index: 100
 	padding-top: 60px
+	&--new
+		padding-top: 0
+		height: 160px
+		.header
+			&-top
+				padding: 21px 0 13px
+				.wrapper
+					align-items: center
+			&-logo
+				position: static
+				transform: none
+			&-list li a
+				padding-top: 22px
+				padding-bottom: 22px
+			&-btn
+				padding-top: 22px
+				padding-bottom: 22px
+			&-bottom
+				.wrapper
+					padding-right: 370px
 	&-top .wrapper,&-search,&-bottom .wrapper,&-list
 		display: flex
 		flex-flow: row nowrap
@@ -31,7 +51,28 @@
 		svg,img
 			display: block
 			max-width: 20px
-			margin-right: 24px
+		& > * + *
+			margin-left: 24px
+		&:hover
+			color: #7b7b81
+	&-auth
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		margin-left: 32px
+		font-size: 16px
+		line-height: 24px
+		font-weight: 600
+		color: #9D9DA4
+		cursor: pointer
+		position: relative
+		z-index: 100
+		transition: $transition
+		svg,img
+			display: block
+			max-width: 20px
+		& > * + *
+			margin-left: 24px
 		&:hover
 			color: #7b7b81
 	&-logo
@@ -88,7 +129,9 @@
 			//padding-right: 30px
 			padding-right: 44px
 			a
-				display: block
+				display: flex
+				align-items: center
+				width: fit-content
 				font-size: 14px
 				line-height: 24px
 				font-weight: 800
@@ -98,6 +141,17 @@
 				padding: 24px 0
 				&:hover
 					color: #7B7B81
+				.tag
+					margin-right: 10px
+					padding: 3px 6px 1px
+					font-family: $GraphikLCG
+					font-size: 19px
+					font-weight: bold
+					line-height: 1
+					letter-spacing: -0.035em
+					color: #fff
+					background: #E21C13
+					border-radius: 8px
 	&-btn
 		display: flex
 		flex-flow: row nowrap
@@ -169,6 +223,63 @@
 				content: ''
 				transition: $transition
 				margin-top: -9px
+	&-controls
+		display: flex
+		align-items: center
+		width: fit-content
+	&-control
+		display: flex
+		align-items: center
+		margin-right: 32px
+		padding: 16px 22px
+		width: fit-content
+		font-size: 14px
+		font-weight: 600
+		line-height: 1
+		white-space: nowrap
+		color: #000000
+		background: transparent
+		border: 1px solid #E4E4E4
+		border-radius: 38px
+		& > svg
+			min-width: 14px
+			width: 14px
+			height: 14px
+		& > * + * 
+			margin-left: 11px
+		&:hover
+			color: #000000
+			border-color: #000000
+
+		@media screen and (max-width: 940px)
+			&--desktop
+				display: none
+	&-login
+		display: block
+		overflow: hidden
+		margin-left: 32px
+		min-width: 50px
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&-bg-inner
+		position: absolute
+		top: 0
+		right: -27px
+		z-index: 1
+		display: flex
+		align-items: center
+		padding-right: 50px
+		background: #f0f0f3
+		.header-btn
+			position: static
+			padding-right: 38px
+			padding-left: 45px
 	&.header-second
 		.header
 			&-search
@@ -196,8 +307,59 @@
 					border-top: 1px solid rgba(#fff, 0.2)
 					border-bottom: 1px solid rgba(#fff, 0.2)
 
+.header-nav-new
+	@media screen and (max-width: 1199px)
+		display: none
+	&__list
+		display: flex
+		align-items: center
+		width: fit-content
+	&__item + &__item
+		margin-left: 50px
+	&__link
+		display: block
+		width: fit-content
+		font-family: $GraphikLCG
+		font-size: 16px
+		font-weight: 500
+		color: #000
+		&:hover
+			color: #000
+
+.header-sorts
+	@media only screen and (max-width : 940px)
+		display: none
+	&__btn
+		display: none
+		align-items: center
+		padding: 7px 15px
+		width: fit-content
+		font-size: 14px
+		font-weight: 600
+		white-space: nowrap
+		color: #9D9DA4
+		background: #fff
+		border: none
+		border-radius: 38px
+		transition: all 0.25s ease-in-out
+		& > svg
+			min-width: 11px
+			width: 11px
+			height: 10px
+		& > * + *
+			margin-left: 8px
+		&:focus
+			outline: none
+		&.is--active
+			display: flex
+
 @media only screen and (max-width : 1200px)
 	.header
+		&--new
+			.header
+				&-logo
+					width: 222px
+					height: 58px
 		&-logo
 			max-width: 250px
 			width: 100%
@@ -210,6 +372,29 @@
 		height: auto
 		padding: 24px 0 0
 		background: #000
+		&--new
+			padding: 19px 0 7px
+			background: #fff
+			.header
+				&-top
+					padding: 0
+				&-search
+					svg
+						path
+							fill: #000
+				&-bar span,
+				&-bar span:before,
+				&-bar span:after
+					background: #000
+				&-bottom
+					.wrapper
+						padding: 0
+			.logo
+				margin-bottom: 0!important
+				max-width: 132px
+				min-width: 132px
+				width: 132px
+				height: 34px
 		.wrapper
 			padding: 0
 		&-top
@@ -226,6 +411,9 @@
 					fill: #fff
 			span
 				display: none
+		&-auth,
+		&-login
+			display: none
 		&-logo
 			display: none
 		.logo
@@ -282,6 +470,14 @@
 			background: #000
 			color: #fff
 			justify-content: space-between
+		&-bg-inner
+			position: static
+			flex-direction: column
+			padding: 0
+			width: 100%
+			.header-btn
+				padding: 16px
+				width: 100%
 		&-mob,&-bg,&-bar
 			display: block
 		&-projects
