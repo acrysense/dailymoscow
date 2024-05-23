@@ -704,6 +704,40 @@
 			height: 100%
 			object-fit: cover
 
+.new-sort-rubrics
+	margin-bottom: 16px
+	padding: 16px 0
+
+	@media screen and (min-width: 769px)
+		&--mobile
+			display: none
+
+	&__wrapper
+		display: flex
+		padding: 2px
+		width: 100%
+		background: #F6F6F9
+		border: 1px solid rgba(#000, 0.09)
+		border-radius: 20px
+	&__item
+		flex: 1 1 auto
+		width: calc(50% - 1px)
+		&:nth-child(n + 2)
+			margin-left: 2px
+	&__btn
+		display: block
+		padding: 4px
+		width: 100%
+		font-size: 14px
+		font-weight: 600
+		line-height: 20px
+		white-space: nowrap
+		color: #9D9DA4
+		border-radius: 20px
+		&.is--active
+			color: #fff
+			background: #000
+
 .new-media-post
 	padding-bottom: 24px
 	border-bottom: 1px solid #EFEFF3
