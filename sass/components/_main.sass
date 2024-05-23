@@ -367,7 +367,7 @@
 		align-items: center
 		flex-flow: row nowrap
 		justify-content: space-between
-		&:hover .post-title
+		&:hover .new-post-title
 			color: #7B7B81
 	&-title
 		font-family: $GraphikLCG
@@ -475,6 +475,9 @@
 		font-size: 36px
 		font-weight: bold
 		line-height: 48px
+		color: #fff
+		&:hover
+			color: rgba(#EFEFF3, 0.8)
 	&__wrapper
 		display: flex
 		justify-content: space-between
@@ -495,6 +498,9 @@
 		font-size: 16px
 		font-weight: 500
 		line-height: 24px
+		color: #fff
+		&:hover
+			color: rgba(#EFEFF3, 0.8)
 
 .new-stories
 	@media screen and (min-width: 769px)
@@ -788,7 +794,7 @@
 		line-height: 24px
 		color: #000000
 		&:hover 
-			color: #000000
+			color: #7B7B81
 	&__description
 		display: block
 		margin-top: 24px
@@ -851,6 +857,8 @@
 			font-weight: bold
 		a
 			color: #000
+			&:hover
+				color: #7B7B81
 	&.article-dark
 		background: #000
 		border: none
@@ -1043,12 +1051,12 @@
 		margin-top: 48px
 		padding-top: 48px
 		width: 100%
-		border-top: 1px solid #EFEFF3
+		border-top: 1px solid rgba(#EFEFF3, 0.3)
 
 .exclusive-materials-subs-card
 	color: #FFF
 	&:hover
-		color: #FFF
+		color: rgba(#EFEFF3, 0.8)
 	&__img
 		position: relative
 		z-index: 1
@@ -1085,8 +1093,8 @@
 	justify-content: space-between
 	color: #FFF
 	&:hover
-		color: #FFF
-
+		color: rgba(#EFEFF3, 0.8)
+	
 	@media screen and (max-width: 1023px)
 		display: none
 	
