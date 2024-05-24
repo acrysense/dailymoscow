@@ -950,7 +950,7 @@
 		position: relative
 		z-index: 1
 
-		@media screen and (max-width: 767px)
+		@media screen and (max-width: 1023px)
 			padding-bottom: 52px
 
 		.slick-arrow
@@ -979,6 +979,9 @@
 			&:hover
 				svg path
 					fill: #fff
+				
+			@media screen and (min-width: 1024px)
+				display: none
 		.slick-prev
 			left: 16px
 		.slick-next
@@ -991,6 +994,8 @@
 			max-width: calc(100% - 32px - 64px)
 			width: 100%
 			height: 32px
+			@media screen and (min-width: 1024px)
+				display: none
 			li
 				width: 15px
 				height: 32px
